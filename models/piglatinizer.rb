@@ -1,17 +1,17 @@
 class PigLatinizer
 
   def piglatinize(word)
-    piglatin = ""
+    result = ""
     if word[0].downcase =~ /[aeiou]/
-      piglatin = word + "way"
+      result = word + "way"
     else
       index = first_vowel(word)
-      piglatin = word[index..-1] + word[0..(index-1)] + "ay"
+      result = word[index..-1] + word[0..(index-1)] + "ay"
     end
   end
 
-  def multiple_words_to_pig_latin(sentence)
-    sentence.split.collect do |word|
+  def to_pig_latin(text)
+    text.split.collect do |word|
       piglatinize(word)
     end.join(" ")
   end
