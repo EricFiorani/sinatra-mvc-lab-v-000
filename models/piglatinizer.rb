@@ -1,6 +1,7 @@
 class PigLatinizer
 
   attr_reader :words, :word
+  
   def piglatinize(words)
     words=word.split(" ")
     words.each do |x|
