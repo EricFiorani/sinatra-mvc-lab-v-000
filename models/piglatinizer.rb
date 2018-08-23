@@ -1,12 +1,12 @@
 class PigLatinizer
 
   def piglatinize(word)
-    result = ""
+    piglatin = ""
     if word[0].downcase =~ /[aeiou]/
-      result = word + "way"
+      piglatin = word + "way"
     else
       index = first_vowel(word)
-      result = word[index..-1] + word[0..(index-1)] + "ay"
+      piglatin = word[index..-1] + word[0..(index-1)] + "ay"
     end
   end
 
